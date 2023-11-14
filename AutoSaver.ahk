@@ -2,7 +2,7 @@
 
 
 global SoundPlayed := false
-SaveIntervalMinutes := 0.2
+SaveIntervalMinutes := 10
 
 Run "bg3.lnk"
 Sleep 10000
