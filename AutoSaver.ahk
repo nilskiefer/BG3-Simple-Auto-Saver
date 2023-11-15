@@ -46,7 +46,7 @@ CheckGame() {
 }
 
 CheckGameClosed() {
-    
+
     if !(WinExist("ahk_exe bg3.exe") or WinExist("ahk_exe bg3_dx11.exe")) {
         ; Debug ToolTip
         ;ToolTip "CheckGameClosed returned: true"
@@ -88,10 +88,10 @@ CheckAFK() {
 
 
 PressTheKey() {
-    If (CheckGame()) {
-        If (!CheckAFK()) {
+    If (CheckGame() and !CheckAFK()) {
+       
             Send("{F5}")
-        }
+        
     }
 }
 return
