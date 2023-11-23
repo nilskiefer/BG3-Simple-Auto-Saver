@@ -4,7 +4,10 @@
 global SoundPlayed := false
 SaveIntervalMinutes := 10
 
-Run "bg3.lnk"
+if !(WinExist("ahk_exe bg3.exe") or WinExist("ahk_exe bg3_dx11.exe")) {
+        Run "bg3.lnk"
+}
+
 Sleep 10000
 SetTimer(CheckGameStart, 1000)
 SetTimer(CheckGameClosed, 1000)
